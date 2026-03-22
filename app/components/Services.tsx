@@ -4,98 +4,104 @@ const WA_LINK =
 const services = [
   {
     icon: "fa-bug",
-    emoji: "🐜",
     title: "Termite Treatment",
-    desc: "Advanced baiting & liquid treatment. Protects structure for up to 5 years with warranty.",
+    desc: "Advanced baiting and liquid barrier treatment. Structural protection with up to 5-year warranty coverage.",
     slug: "termite-treatment",
   },
   {
-    icon: "fa-cockroach",
-    emoji: "🪳",
+    icon: "fa-shield-virus",
     title: "Cockroach Control",
-    desc: "Gel treatment & spray for complete elimination. Safe for families and pets.",
+    desc: "Gel baiting and residual spray for complete colony elimination. Safe formulations for families and pets.",
     slug: "cockroach-control",
   },
   {
     icon: "fa-paw",
-    emoji: "🐀",
     title: "Rodent Control",
-    desc: "Trapping, baiting & proofing solutions to keep rats and mice out permanently.",
+    desc: "Integrated trapping, baiting and structural proofing to permanently exclude rats and mice.",
     slug: "rodent-control",
   },
   {
     icon: "fa-mosquito",
-    emoji: "🦟",
     title: "Mosquito & Fly Control",
-    desc: "Fogging, larviciding & residual spray for outdoor and indoor mosquito management.",
+    desc: "Thermal fogging, larviciding and residual spray for comprehensive indoor and outdoor management.",
     slug: "mosquito-fly-control",
   },
   {
-    icon: "fa-locust",
-    emoji: "🐝",
+    icon: "fa-house-chimney-crack",
     title: "Beehive & Wasp Removal",
-    desc: "Safe removal and relocation of hives from residential and commercial properties.",
+    desc: "Professional removal and safe relocation from residential and commercial properties.",
     slug: "beehive-wasp-removal",
   },
   {
-    icon: "fa-wheat-awn",
-    emoji: "🌾",
+    icon: "fa-seedling",
     title: "Agricultural Pest Control",
-    desc: "Crop protection services for paddy, vegetable and fruit farms across the Eastern Province.",
+    desc: "Crop protection services for paddy, vegetable and fruit farming operations across the Eastern Province.",
     slug: "agricultural-pest-control",
   },
   {
     icon: "fa-building",
-    emoji: "🏢",
     title: "Commercial Pest Management",
-    desc: "Annual maintenance contracts for hotels, restaurants, warehouses and offices.",
+    desc: "Annual maintenance contracts for hotels, restaurants, warehouses, food processors and offices.",
     slug: "commercial-pest-management",
   },
   {
-    icon: "fa-tree",
-    emoji: "🪲",
+    icon: "fa-couch",
     title: "Wood Borer Treatment",
-    desc: "Fumigation and chemical treatment to protect furniture and wooden structures.",
+    desc: "Fumigation and chemical injection to protect furniture, timber structures and wooden frameworks.",
     slug: "wood-borer-treatment",
+  },
+  {
+    icon: "fa-microscope",
+    title: "Environmental Assessments",
+    desc: "Comprehensive site inspections, environmental impact evaluations and pest risk analysis reports.",
+    slug: "environmental-assessments",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="services" className="w-full bg-bg px-4 py-16 md:py-20">
+    <section id="services" className="w-full bg-bg px-4 py-16 md:py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-12 text-center">
+        <div className="mb-4 text-center">
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-secondary">
+            What We Do
+          </p>
           <h2 className="mb-3 text-3xl font-bold text-primary md:text-4xl">
-            Our Pest Control Services
+            Our Services
           </h2>
-          <p className="mx-auto max-w-2xl text-text-light">
-            Complete protection for homes, offices &amp; agriculture
+          <p className="mx-auto max-w-xl text-sm leading-relaxed text-text-muted">
+            Integrated pest management and environmental engineering solutions
+            for residential, commercial and agricultural sectors.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.slug}
-              className="group rounded-xl border-t-4 border-secondary bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+              className="group relative overflow-hidden rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
             >
-              <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-secondary/10 text-2xl">
-                {service.emoji}
+              <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/5 text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
+                <i className={`fas ${service.icon} text-lg`}></i>
               </div>
-              <h3 className="mb-2 text-lg font-bold text-primary">
+
+              <h3 className="mb-2 text-base font-bold text-text">
                 {service.title}
               </h3>
-              <p className="mb-4 text-sm leading-relaxed text-text-light">
+              <p className="mb-5 text-[13px] leading-relaxed text-text-muted">
                 {service.desc}
               </p>
+
               <a
                 href={`${WA_LINK}${encodeURIComponent(service.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-lg border-2 border-secondary px-4 py-2 text-sm font-semibold text-secondary transition-all hover:bg-secondary hover:text-white"
+                className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-primary transition-colors hover:text-accent"
               >
-                Get Quote
-                <i className="fas fa-arrow-right text-xs"></i>
+                Request Quote
+                <i className="fas fa-arrow-right text-[10px] transition-transform group-hover:translate-x-1"></i>
               </a>
             </div>
           ))}

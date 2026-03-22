@@ -11,7 +11,6 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import ServiceAreas from "./components/ServiceAreas";
 import HowItWorks from "./components/HowItWorks";
 import Testimonials from "./components/Testimonials";
-import PricingTeaser from "./components/PricingTeaser";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
@@ -61,19 +60,15 @@ export default function Home() {
         </div>
 
         <div className="fade-in-section">
-          <ServiceAreas />
-        </div>
-
-        <div className="fade-in-section">
           <HowItWorks />
         </div>
 
         <div className="fade-in-section">
-          <Testimonials />
+          <ServiceAreas />
         </div>
 
         <div className="fade-in-section">
-          <PricingTeaser />
+          <Testimonials />
         </div>
 
         <div className="fade-in-section">
@@ -83,12 +78,10 @@ export default function Home() {
 
       <Footer />
 
-      {/* Floating elements */}
       <FloatingCTA />
       <WhatsAppBubble />
       <BackToTop />
 
-      {/* Extra bottom padding on mobile to account for fixed CTA bar */}
       <div className="h-16 md:hidden"></div>
     </>
   );
