@@ -4,87 +4,88 @@ const WA_LINK =
   "https://wa.me/94775354349?text=Hello%20Green%20Solution%2C%20I%20need%20pest%20control%20services";
 
 const services = [
-  "Termite Treatment",
-  "Cockroach Control",
-  "Rodent Control",
-  "Mosquito Control",
-  "Beehive Removal",
-  "Agricultural Pest Control",
-  "Commercial Management",
-  "Wood Borer Treatment",
-  "Environmental Assessments",
+  "Pest Management",
+  "Termite Control",
+  "Environmental Engineering Consultancy",
 ];
 
-const areas = [
-  "Batticaloa",
-  "Trincomalee",
-  "Ampara",
-  "Kalmunai",
-  "Kattankudy",
-  "Eravur",
-];
+const areas = ["Batticaloa", "Trincomalee", "Ampara", "All Island"];
 
 const quickLinks = [
   { label: "Home", href: "#home" },
   { label: "Services", href: "#services" },
-  { label: "Why Choose Us", href: "#why-us" },
   { label: "Service Areas", href: "#areas" },
-  { label: "Contact", href: "#contact" },
+  { label: "Get Quotation", href: "#footer" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-primary-dark px-4 pt-14 text-white">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 pb-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div className="mb-4 flex items-center gap-3">
+    <footer id="footer" className="w-full bg-[#071f07] text-white">
+      <div className="mx-auto max-w-5xl px-6 pb-10 pt-16 sm:px-8">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
+          {/* Brand */}
+          <div className="lg:col-span-4">
+            <div className="mb-6 flex items-center gap-3">
               <Image
                 src="/logo.jpeg"
-                alt="Green Solution"
+                alt="Green Solution Pest Management Environmental Engineering Consultancy Sri Lanka"
                 width={40}
                 height={40}
-                className="h-10 w-10 rounded-full object-cover"
+                className="h-10 w-10 rounded-xl object-cover"
               />
               <div>
-                <p className="text-sm font-bold leading-tight">Green Solution</p>
-                <p className="text-[9px] uppercase tracking-wider text-white/40">
-                  Pest Management &amp; Environmental Engineering
+                <p className="text-sm font-bold leading-tight">
+                  Green Solution
+                </p>
+                <p className="text-[8px] font-semibold uppercase tracking-[0.15em] text-white/30">
+                  Environmental Engineering Consultancy
                 </p>
               </div>
             </div>
-            <p className="mb-5 text-[13px] leading-relaxed text-white/50">
+
+            <p className="mb-6 max-w-[260px] text-[12px] leading-[1.8] text-white/35">
               Licensed pest control and environmental engineering consultancy
-              serving the Eastern Province of Sri Lanka.
+              serving Batticaloa, Trincomalee, Ampara and all island Sri Lanka.
             </p>
-            <div className="flex gap-2.5">
+
+            <div className="flex gap-2">
               <a
                 href={WA_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.06] text-sm transition-colors hover:bg-[#25D366] hover:text-white"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.05] text-[13px] text-white/40 transition-all hover:bg-[#25D366] hover:text-white"
+                aria-label="WhatsApp"
               >
                 <i className="fab fa-whatsapp"></i>
               </a>
               <a
                 href="tel:+94775354349"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.06] text-sm transition-colors hover:bg-accent hover:text-white"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.05] text-[11px] text-white/40 transition-all hover:bg-accent hover:text-white"
+                aria-label="Call"
               >
-                <i className="fas fa-phone text-xs"></i>
+                <i className="fas fa-phone"></i>
+              </a>
+              <a
+                href="mailto:greensolutionpm@gmail.com"
+                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/[0.05] text-[11px] text-white/40 transition-all hover:bg-primary-light hover:text-white"
+                aria-label="Email"
+              >
+                <i className="fas fa-envelope"></i>
               </a>
             </div>
           </div>
 
-          <div>
-            <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white/30">
+          {/* Quick Links */}
+          <div className="lg:col-span-2">
+            <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">
               Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-[13px] text-white/50 transition-colors hover:text-white"
+                    className="text-[12px] text-white/40 transition-colors hover:text-white"
                   >
                     {link.label}
                   </a>
@@ -93,56 +94,99 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white/30">
-              Services
+          {/* Services & Areas */}
+          <div className="lg:col-span-3">
+            <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">
+              Our Services
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-2.5">
               {services.map((s) => (
                 <li key={s}>
                   <a
                     href="#services"
-                    className="text-[13px] text-white/50 transition-colors hover:text-white"
+                    className="text-[12px] text-white/40 transition-colors hover:text-white"
                   >
                     {s}
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
 
-          <div>
-            <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[0.15em] text-white/30">
+            <h4 className="mb-3 mt-7 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">
               Service Areas
             </h4>
-            <ul className="mb-6 space-y-2">
+            <div className="flex flex-wrap gap-1.5">
               {areas.map((a) => (
-                <li key={a}>
-                  <a
-                    href="#areas"
-                    className="text-[13px] text-white/50 transition-colors hover:text-white"
-                  >
-                    {a}
-                  </a>
-                </li>
+                <a
+                  key={a}
+                  href="#areas"
+                  className="inline-block rounded-md bg-white/[0.04] px-2.5 py-1 text-[11px] text-white/40 transition-colors hover:bg-white/[0.08] hover:text-white"
+                >
+                  {a}
+                </a>
               ))}
-            </ul>
-            <h4 className="mb-2 text-[11px] font-bold uppercase tracking-[0.15em] text-white/30">
-              Contact
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div className="lg:col-span-3">
+            <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">
+              Contact Us
             </h4>
-            <p className="text-[13px] text-white/50">077 535 4349</p>
-            <p className="text-[13px] text-white/50">065 205 8699</p>
+
+            <div className="space-y-3">
+              <div className="flex items-start gap-3">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/[0.04]">
+                  <i className="fas fa-phone text-[9px] text-white/30"></i>
+                </div>
+                <div>
+                  <a
+                    href="tel:+94775354349"
+                    className="block text-[12px] font-medium text-white/55 transition-colors hover:text-white"
+                  >
+                    077 535 4349
+                  </a>
+                  <a
+                    href="tel:+94652058699"
+                    className="block text-[12px] text-white/35 transition-colors hover:text-white"
+                  >
+                    065 205 8699
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/[0.04]">
+                  <i className="fas fa-envelope text-[9px] text-white/30"></i>
+                </div>
+                <a
+                  href="mailto:greensolutionpm@gmail.com"
+                  className="text-[12px] text-white/40 transition-colors hover:text-white"
+                >
+                  greensolutionpm@gmail.com
+                </a>
+              </div>
+
+              <div className="flex items-center gap-3">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/[0.04]">
+                  <i className="fas fa-clock text-[9px] text-white/30"></i>
+                </div>
+                <p className="text-[12px] text-white/40">
+                  Mon – Sun, 7 AM – 8 PM
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-white/[0.06] py-6 text-center text-[11px] text-white/25">
-          <p className="mb-1">
-            Licensed Pest Control Operator &amp; Environmental Engineering Consultancy — Eastern Province, Sri Lanka
-          </p>
+      <div className="border-t border-white/[0.04]">
+        <div className="mx-auto flex max-w-5xl flex-col items-center gap-1 px-6 py-5 text-center text-[10px] text-white/15 sm:flex-row sm:justify-between sm:px-8">
           <p>
             &copy; {new Date().getFullYear()} Green Solution Pest Management
             &amp; Environmental Engineering Consultancy
           </p>
+          <p>Licensed Pest Control Operator — Sri Lanka</p>
         </div>
       </div>
     </footer>

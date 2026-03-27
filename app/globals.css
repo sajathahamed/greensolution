@@ -97,12 +97,6 @@ body {
   transform: translateY(0);
 }
 
-/* Counter tick */
-@keyframes counter-fill {
-  from { width: 0%; }
-  to { width: 100%; }
-}
-
 /* Floating WhatsApp bubble bounce */
 @keyframes float-bounce {
   0%, 100% {
@@ -122,36 +116,3 @@ body {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-/* ===== THEME OVERRIDES ===== */
-
-/* Blue theme — professional / trust */
-html.theme-blue {
-  --color-primary: #0D47A1;
-  --color-primary-light: #1565C0;
-  --color-primary-dark: #002171;
-  --color-secondary: #1E88E5;
-  --color-secondary-light: #42A5F5;
-  --color-accent: #FF6F00;
-  --color-accent-dark: #E65100;
-  --color-accent-light: #FF8F00;
-}
-
-/* Yellow / Amber theme — warm / attention */
-html.theme-yellow {
-  --color-primary: #E65100;
-  --color-primary-light: #F57C00;
-  --color-primary-dark: #BF360C;
-  --color-secondary: #FFB300;
-  --color-secondary-light: #FFCA28;
-  --color-accent: #D84315;
-  --color-accent-dark: #BF360C;
-  --color-accent-light: #FF5722;
-}
-
-/* Smooth transition when switching themes */
-html.theme-transitioning,
-html.theme-transitioning *,
-html.theme-transitioning *::before,
-html.theme-transitioning *::after {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease !important;
-}

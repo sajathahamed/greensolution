@@ -4,14 +4,10 @@ import { useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import UrgencyBanner from "./components/UrgencyBanner";
-import StatsCounter from "./components/StatsCounter";
 import Services from "./components/Services";
-import TermiteSpotlight from "./components/TermiteSpotlight";
-import WhyChooseUs from "./components/WhyChooseUs";
 import ServiceAreas from "./components/ServiceAreas";
+import QuotationForm from "./components/QuotationForm";
 import HowItWorks from "./components/HowItWorks";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import FloatingCTA from "./components/FloatingCTA";
 import WhatsAppBubble from "./components/WhatsAppBubble";
@@ -44,19 +40,7 @@ export default function Home() {
         <UrgencyBanner />
 
         <div className="fade-in-section">
-          <StatsCounter />
-        </div>
-
-        <div className="fade-in-section">
           <Services />
-        </div>
-
-        <div className="fade-in-section">
-          <TermiteSpotlight />
-        </div>
-
-        <div className="fade-in-section">
-          <WhyChooseUs />
         </div>
 
         <div className="fade-in-section">
@@ -68,12 +52,9 @@ export default function Home() {
         </div>
 
         <div className="fade-in-section">
-          <Testimonials />
+          <QuotationForm />
         </div>
 
-        <div className="fade-in-section">
-          <Contact />
-        </div>
       </main>
 
       <Footer />

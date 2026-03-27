@@ -8,68 +8,78 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[92vh] w-full items-center justify-center overflow-hidden bg-gradient-to-br from-primary-dark via-primary to-secondary px-4 py-24 text-center text-white md:min-h-[88vh]"
+      className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#062106] via-[#0e3a0e] to-[#1B5E20] px-5 text-center text-white sm:px-8"
     >
-      <div className="absolute inset-0 bg-black/45"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,_rgba(76,175,80,0.08)_0%,_transparent_60%)]"></div>
 
-      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.3'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3C/g%3E%3C/svg%3E\")" }}></div>
-
-      <div className="relative z-10 mx-auto max-w-4xl">
-        <div className="mb-6 flex justify-center">
+      <div className="relative z-10 w-full max-w-4xl py-16 sm:py-20">
+        {/* Logo */}
+        <div className="mb-12 flex justify-center sm:mb-14">
           <Image
             src="/logo.jpeg"
-            alt="Green Solution Pest Management"
-            width={90}
-            height={90}
-            className="h-20 w-20 rounded-full border-3 border-white/30 object-cover shadow-2xl sm:h-[90px] sm:w-[90px]"
+            alt="Green Solution Pest Management & Environmental Engineering Consultancy Sri Lanka"
+            width={140}
+            height={140}
+            priority
+            className="h-28 w-28 rounded-3xl border-[3px] border-white/15 object-cover shadow-[0_20px_60px_rgba(0,0,0,0.4)] sm:h-32 sm:w-32"
           />
         </div>
 
-        <p className="mb-1 text-xs font-semibold uppercase tracking-[0.3em] text-white/60 sm:text-sm">
-          Green Solution
-        </p>
-        <p className="mb-8 text-[11px] font-medium uppercase tracking-[0.15em] text-white/50 sm:text-xs">
-          Pest Management &amp; Environmental Engineering Consultancy
-        </p>
-
-        <h1 className="mb-5 text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-4xl md:text-5xl lg:text-[3.5rem]">
-          Protect Your Valuable Home
-          <br />
-          From{" "}
-          <span className="bg-gradient-to-r from-accent-light to-accent bg-clip-text text-transparent">
-            Subterranean Termites
-          </span>
+        {/* Company Name — single line */}
+        <h1 className="mb-3 whitespace-nowrap text-[1.3rem] font-extrabold leading-[1.1] tracking-tight sm:text-[2rem] md:text-[2.75rem] lg:text-[3.25rem]">
+          Green Solution Pest Management
         </h1>
+        <p className="text-base font-semibold text-accent-light sm:text-lg md:text-xl lg:text-2xl">
+          Environmental Engineering Consultancy
+        </p>
 
-        <p className="mx-auto mb-2 max-w-2xl text-base font-light leading-relaxed text-white/85 sm:text-lg md:text-xl">
+        {/* Divider */}
+        <div className="mx-auto my-10 h-px w-14 bg-white/12 sm:my-12"></div>
+
+        {/* Headline */}
+        <p className="text-[15px] font-medium text-white/70 sm:text-base md:text-lg">
+          Protect Your Valuable Home From
+        </p>
+        <p className="mt-1 text-xl font-extrabold sm:text-2xl md:text-3xl">
+          Subterranean Termites
+        </p>
+        <p className="mt-3 text-[12px] font-normal tracking-wide text-white/35 sm:text-[13px]">
           The Most Destructive Structural Pest in the World
         </p>
 
-        <p className="mb-10 text-base font-semibold text-secondary-light sm:text-lg">
-          கிருமி கட்டுப்பாடு
-        </p>
+        {/* Multilingual */}
+        <div className="mt-6 flex items-center justify-center gap-3 text-[12px] sm:gap-5 sm:text-[13px]">
+          <span className="font-medium text-secondary-light/80">වේයන් මර්දනය</span>
+          <span className="text-white/15">|</span>
+          <span className="font-medium text-accent-light/80">கிருமி கட்டுப்பாடு</span>
+          <span className="text-white/15">|</span>
+          <span className="font-medium text-white/50">Termite Control</span>
+        </div>
 
-        <div className="mb-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        {/* CTA Buttons */}
+        <div className="mt-12 flex flex-col items-center gap-3 sm:mt-14 sm:flex-row sm:justify-center sm:gap-4">
           <a
             href={`tel:${PHONE}`}
-            className="animate-pulse-glow inline-flex h-[52px] min-w-[220px] items-center justify-center gap-3 rounded-xl bg-accent px-8 text-base font-bold text-white shadow-xl transition-all hover:bg-accent-dark hover:shadow-2xl sm:h-14 sm:text-lg"
+            className="animate-pulse-glow inline-flex h-[50px] w-full items-center justify-center gap-2.5 rounded-full bg-accent px-8 text-sm font-bold text-white shadow-lg transition-all hover:bg-accent-dark sm:h-[52px] sm:w-auto sm:text-[15px]"
           >
-            <i className="fas fa-phone"></i>
+            <i className="fas fa-phone text-xs"></i>
             Call Now
           </a>
           <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="animate-pulse-green inline-flex h-[52px] min-w-[220px] items-center justify-center gap-3 rounded-xl bg-[#25D366] px-8 text-base font-bold text-white shadow-xl transition-all hover:brightness-110 hover:shadow-2xl sm:h-14 sm:text-lg"
+            className="animate-pulse-green inline-flex h-[50px] w-full items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-8 text-sm font-bold text-white shadow-lg transition-all hover:brightness-110 sm:h-[52px] sm:w-auto sm:text-[15px]"
           >
-            <i className="fab fa-whatsapp text-xl"></i>
-            WhatsApp
+            <i className="fab fa-whatsapp text-base"></i>
+            WhatsApp Us
           </a>
         </div>
 
-        <div className="mx-auto max-w-xl rounded-2xl bg-white/[0.07] px-6 py-4 backdrop-blur-sm">
-          <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-[13px] text-white/80 sm:text-sm">
+        {/* Licences & Credentials */}
+        <div className="mt-14 sm:mt-16">
+          {/* Trust badges */}
+          <div className="mb-6 flex items-center justify-center gap-6 text-[12px] text-white/55 sm:gap-8 sm:text-[13px]">
             <span className="flex items-center gap-2">
               <i className="fas fa-certificate text-accent-light"></i>
               Licensed
@@ -83,12 +93,49 @@ export default function Hero() {
               Eco-Safe
             </span>
           </div>
+
+          {/* License Cards */}
+          <div className="mx-auto grid max-w-2xl grid-cols-2 gap-3 sm:gap-4">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-center backdrop-blur-sm sm:px-5 sm:py-5">
+              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-accent-light sm:text-[11px]">
+                REG No
+              </p>
+              <p className="text-[14px] font-extrabold text-white sm:text-base">
+                DS/EP/BR/58/2017
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-center backdrop-blur-sm sm:px-5 sm:py-5">
+              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-secondary-light sm:text-[11px]">
+                EP Licence No
+              </p>
+              <p className="text-[14px] font-extrabold text-white sm:text-base">
+                B 23428
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-center backdrop-blur-sm sm:px-5 sm:py-5">
+              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-accent-light sm:text-[11px]">
+                WMP License No
+              </p>
+              <p className="text-[11px] font-extrabold leading-snug text-white sm:text-[13px]">
+                1995/HWM/B69/SL/CEA/2024
+              </p>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/[0.06] px-4 py-4 text-center backdrop-blur-sm sm:px-5 sm:py-5">
+              <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.15em] text-secondary-light sm:text-[11px]">
+                ROP License No
+              </p>
+              <p className="text-[14px] font-extrabold text-white sm:text-base">
+                RP/PCS/EP/112
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="animate-bounce-arrow absolute bottom-8 left-1/2">
-        <a href="#urgency" className="text-white/40 transition-colors hover:text-white">
-          <i className="fas fa-chevron-down text-xl"></i>
+      {/* Scroll Arrow */}
+      <div className="animate-bounce-arrow absolute bottom-4 left-1/2 sm:bottom-6">
+        <a href="#urgency" className="text-white/15 transition-colors hover:text-white/40">
+          <i className="fas fa-chevron-down text-xs"></i>
         </a>
       </div>
     </section>

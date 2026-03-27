@@ -1,9 +1,9 @@
 export default function UrgencyBanner() {
   const items = [
     "Termite season is here — Call now for FREE inspection",
-    "500+ properties protected across Eastern Province",
-    "Licensed Environmental Engineering Consultancy",
-    "Trusted since 2019",
+    "500+ properties protected across Sri Lanka",
+    "Licensed Pest Control & Environmental Engineering",
+    "වේයන් මර්දනය | கிருமி கட்டுப்பாடு | Termite Control",
   ];
 
   const message = items
@@ -13,12 +13,12 @@ export default function UrgencyBanner() {
   const fullMessage = `${message}${message}`;
 
   return (
-    <section id="urgency" className="w-full overflow-hidden bg-primary-dark py-2.5">
+    <section id="urgency" className="w-full overflow-hidden bg-[#071f07] py-2.5">
       <div className="animate-marquee flex whitespace-nowrap">
-        <span className="inline-block text-[13px] font-medium tracking-wide text-white/90">
+        <span className="inline-block text-[12px] font-medium tracking-wide text-white/50">
           {fullMessage}
         </span>
-        <span className="inline-block text-[13px] font-medium tracking-wide text-white/90">
+        <span className="inline-block text-[12px] font-medium tracking-wide text-white/50">
           {fullMessage}
         </span>
       </div>

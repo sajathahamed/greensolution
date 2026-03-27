@@ -17,12 +17,14 @@ export default function BackToTop() {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-24 right-6 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-all duration-300 hover:bg-primary-light md:bottom-6 ${
-        visible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0 pointer-events-none"
+      className={`fixed right-6 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white shadow-lg transition-all duration-300 hover:bg-primary-light md:bottom-6 ${
+        visible
+          ? "bottom-[60px] translate-y-0 opacity-100 md:bottom-6"
+          : "bottom-[60px] translate-y-4 opacity-0 pointer-events-none md:bottom-6"
       }`}
       aria-label="Back to top"
     >
-      <i className="fas fa-chevron-up"></i>
+      <i className="fas fa-chevron-up text-sm"></i>
     </button>
   );
 }
