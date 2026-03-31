@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 
-const poppins = Poppins({
+const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "700", "900"],
   display: "swap",
-  variable: "--font-poppins",
+  variable: "--font-roboto",
 });
 
 export const metadata: Metadata = {
@@ -160,7 +160,7 @@ const jsonLd = [
         name: "What is environmental engineering consultancy?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Environmental engineering consultancy involves professional environmental assessments, site inspections, environmental impact evaluations, and regulatory compliance consulting. Green Solution is a licensed environmental engineering consultancy in Sri Lanka (WMP License: 1995/HWM/B69/SL/CEA/2024).",
+          text: "Environmental engineering consultancy involves professional environmental assessments, site inspections, environmental impact evaluations, and regulatory compliance consulting. Green Solution is a licensed environmental engineering consultancy in Sri Lanka ( License: 1995/HWM/B69/SL/CEA/2024).",
         },
       },
     ],
@@ -173,7 +173,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.variable} suppressHydrationWarning>
+    <html lang="en" className={roboto.variable} suppressHydrationWarning>
       <head>
         <link rel="canonical" href="https://greensolutionpest.lk" />
         <link rel="alternate" hrefLang="en" href="https://greensolutionpest.lk" />

@@ -38,26 +38,26 @@ export default function QuotationForm() {
   };
 
   return (
-    <section className="w-full bg-gradient-to-b from-[#0a3d0a] via-[#145214] to-[#1B5E20] px-6 py-20 sm:px-8 md:py-28">
+    <section className="w-full bg-white px-6 py-20 sm:px-8 md:py-28">
       <div className="mx-auto max-w-md sm:max-w-lg">
         <div className="mb-10 text-center">
-          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.25em] text-white/40">
+          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.25em] text-black/40">
             Free Estimate
           </p>
-          <h2 className="mb-3 text-2xl font-extrabold text-white sm:text-3xl md:text-[2.25rem]">
+          <h2 className="mb-3 text-2xl font-extrabold text-black sm:text-3xl md:text-[2.25rem]">
             Get Your Quotation
           </h2>
-          <p className="text-[13px] text-white/45 sm:text-sm">
+          <p className="text-[13px] text-black/60 sm:text-sm">
             Fill in your details and we will respond within 30 minutes
           </p>
         </div>
 
         <form
           onSubmit={handleSubmit}
-          className="rounded-2xl border border-white/[0.07] bg-white/[0.04] p-7 backdrop-blur-sm sm:p-9"
+          className="rounded-2xl border border-black/20 bg-white/[0.04] p-7 backdrop-blur-sm sm:p-9"
         >
           <div className="mb-5">
-            <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-white/40">
+            <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-black/40">
               Name
             </label>
             <input
@@ -67,12 +67,12 @@ export default function QuotationForm() {
               value={form.name}
               onChange={handleChange}
               placeholder="Your full name"
-              className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-colors focus:border-accent/60"
+              className="w-full rounded-xl border border-black/30 bg-white/[0.04] px-4 py-3.5 text-sm text-black placeholder-black/20 outline-none transition-colors focus:border-black/60"
             />
           </div>
 
           <div className="mb-5">
-            <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-white/40">
+            <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-black/40">
               Address
             </label>
             <textarea
@@ -82,12 +82,12 @@ export default function QuotationForm() {
               onChange={handleChange}
               placeholder="Property address"
               rows={2}
-              className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-colors focus:border-accent/60"
+              className="w-full resize-none rounded-xl border border-black/30 bg-white/[0.04] px-4 py-3.5 text-sm text-black placeholder-black/20 outline-none transition-colors focus:border-black/60"
             />
           </div>
 
           <div className="mb-8">
-            <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-white/40">
+            <label className="mb-2 block text-[10px] font-bold uppercase tracking-[0.15em] text-black/40">
               Contact Number
             </label>
             <input
@@ -97,7 +97,7 @@ export default function QuotationForm() {
               value={form.contact}
               onChange={handleChange}
               placeholder="07X XXX XXXX"
-              className="w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-white placeholder-white/20 outline-none transition-colors focus:border-accent/60"
+              className="w-full rounded-xl border border-black/30 bg-white/[0.04] px-4 py-3.5 text-sm text-black placeholder-black/20 outline-none transition-colors focus:border-black/60"
             />
           </div>
 

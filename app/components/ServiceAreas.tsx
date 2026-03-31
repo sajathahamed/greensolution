@@ -7,7 +7,7 @@ const areas = [
 
 export default function ServiceAreas() {
   return (
-    <section id="areas" className="w-full bg-white px-6 py-20 sm:px-8 md:py-28">
+    <section id="areas" className="w-full bg-gradient-to-b from-[#0a3d0a] via-[#145214] to-[#1B5E20] px-6 py-20 sm:px-8 md:py-28">
       <div className="mx-auto max-w-3xl">
         <div className="mb-14 text-center">
           <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.25em] text-secondary">
