@@ -24,7 +24,27 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="w-full bg-white px-6 py-20 sm:px-8 md:py-28">
+    <section id="services" className="relative w-full bg-white px-6 py-20 sm:px-8 md:py-28">
+      {/* Top-right license numbers */}
+      <div className="absolute right-6 top-6 text-[13px] leading-[2.2] sm:right-10 sm:top-8 sm:text-[14px]">
+        <table className="border-separate border-spacing-x-0">
+          <tbody>
+            {[
+              ["REG No", "DS/EP/BR/58/2017"],
+              ["EP Licence No", "B 23428"],
+              ["SWM License No", "1995/HWM/B69/SL/CEA/2024"],
+              ["ROP License No", "RP/PCS/EP/112"],
+            ].map(([label, value]) => (
+              <tr key={label}>
+                <td className="w-[148px] whitespace-nowrap text-left font-medium text-gray-500">{label}</td>
+                <td className="w-[28px] text-center font-medium text-gray-400">:</td>
+                <td className="pl-2 text-left font-semibold text-gray-700">{value}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
       <div className="mx-auto max-w-4xl">
         <div className="mb-14 text-center">
           <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.25em] text-secondary">

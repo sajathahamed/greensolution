@@ -10,20 +10,6 @@ export default function Hero() {
       id="home"
       className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#062106] via-[#0e3a0e] to-[#1B5E20] px-5 text-center text-white sm:px-8"
     >
-      {/* Top-right license numbers - two columns, right-aligned */}
-      <div className="absolute right-4 top-4 z-20 text-xs font-semibold text-white/80 sm:right-10 sm:top-8">
-        <div className="grid grid-cols-2 gap-x-3 text-right">
-          <div className="pr-2">REG No:</div>
-          <div>DS/EP/BR/58/2017</div>
-          <div className="pr-2">EP Licence No:</div>
-          <div>B 23428</div>
-          <div className="pr-2">SWM License No:</div>
-          <div>1995/HWM/B69/SL/CEA/2024</div>
-          <div className="pr-2">ROP License No:</div>
-          <div>RP/PCS/EP/112</div>
-        </div>
-      </div>
-
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,_rgba(76,175,80,0.08)_0%,_transparent_60%)]"></div>
 
       <div className="relative z-10 w-full max-w-4xl py-16 sm:py-20">
