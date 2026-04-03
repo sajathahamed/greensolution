@@ -2,7 +2,7 @@
 
 const PHONE = "+94775354349";
 const WA_LINK =
-  "https://wa.me/94775354349?text=Hello%20Green%20Solution%2C%20I%20need%20pest%20control%20services";
+  "https://api.whatsapp.com/send?phone=94775354349&text=Hello%20Green%20Solution%2C%20I%20need%20pest%20control%20services";
 
 export default function FloatingCTA() {
   return (

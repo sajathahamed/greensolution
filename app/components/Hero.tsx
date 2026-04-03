@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const PHONE = "+94775354349";
 const WA_LINK =
-  "https://wa.me/94775354349?text=Hello%20Green%20Solution%2C%20I%20need%20pest%20control%20services";
+  "https://api.whatsapp.com/send?phone=94775354349&text=Hello%20Green%20Solution%2C%20I%20need%20pest%20control%20services";
 
 export default function Hero() {
   return (
@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
 
         {/* Company Name — single line */}
-        <h1 className="mb-3 whitespace-nowrap text-[1.3rem] font-extrabold leading-[1.1] tracking-tight sm:text-[2rem] md:text-[2.75rem] lg:text-[3.25rem]">
+        <h1 className="mb-3 text-[1.3rem] font-extrabold leading-[1.1] tracking-tight sm:whitespace-nowrap sm:text-[2rem] md:text-[2.75rem] lg:text-[3.25rem]">
           Green Solution Pest Management
         </h1>
         <p className="text-base font-semibold text-accent-light sm:text-lg md:text-xl lg:text-2xl">
@@ -34,7 +34,7 @@ export default function Hero() {
         </p>
 
         {/* Divider */}
-        <div className="mx-auto my-10 h-px w-14 bg-white/12 sm:my-12"></div>
+        <div className="mx-auto my-2 h-px w-14 bg-white/12 sm:my-4"></div>
 
         {/* Headline */}
         <p className="text-[15px] font-medium text-white/70 sm:text-base md:text-lg">
@@ -43,7 +43,7 @@ export default function Hero() {
         <p className="mt-1 text-xl font-extrabold sm:text-2xl md:text-3xl">
           Subterranean Termites
         </p>
-        <p className="mt-3 text-[12px] font-normal tracking-wide text-white/35 sm:text-[13px]">
+        <p className="mt-3 text-[12px] font-medium tracking-wide text-white sm:text-[13px]">
           The Most Destructive Structural Pest in the World
         </p>
 

@@ -1,6 +1,3 @@
-const WA_LINK =
-  "https://wa.me/94775354349?text=Hello%20Green%20Solution%2C%20I%20need%20a%20quote%20for%20";
-
 const services = [
   {
     icon: "fa-bug",
@@ -26,8 +23,8 @@ export default function Services() {
   return (
     <section id="services" className="relative w-full bg-white px-6 py-20 sm:px-8 md:py-28">
       {/* Top-right license numbers */}
-      <div className="absolute right-6 top-6 text-[13px] leading-[2.2] sm:right-10 sm:top-8 sm:text-[14px]">
-        <table className="border-separate border-spacing-x-0">
+      <div className="mb-8 flex justify-center text-[12px] leading-[2] sm:text-[13px] lg:absolute lg:right-6 lg:top-6 lg:mb-0 lg:justify-end lg:text-[14px]">
+        <table className="border-separate border-spacing-x-0 rounded-xl bg-white/95 px-3 py-2 shadow-sm">
           <tbody>
             {[
               ["REG No", "DS/EP/BR/58/2017"],
@@ -47,10 +44,7 @@ export default function Services() {
 
       <div className="mx-auto max-w-4xl">
         <div className="mb-14 text-center">
-          <p className="mb-3 text-[11px] font-bold uppercase tracking-[0.25em] text-secondary">
-            What We Do
-          </p>
-          <h2 className="text-2xl font-extrabold text-text sm:text-3xl md:text-[2.25rem]">
+          <h2 className="text-3xl font-extrabold text-text sm:text-4xl md:text-[3.1rem]">
             Our Services
           </h2>
         </div>
@@ -59,30 +53,13 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.slug}
-              className="group relative rounded-2xl border border-gray-100 bg-white p-8 transition-all duration-300 hover:-translate-y-1 hover:border-gray-200 hover:shadow-xl"
+              className="group relative rounded-2xl border border-gray-100 bg-white p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gray-200 hover:shadow-xl"
             >
               <div className="absolute inset-x-0 top-0 h-[3px] rounded-t-2xl bg-gradient-to-r from-primary to-secondary opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-              <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/[0.05] text-primary transition-colors duration-300 group-hover:bg-primary group-hover:text-white">
-                <i className={`fas ${service.icon} text-xl`}></i>
-              </div>
-
-              <h3 className="mb-3 text-[17px] font-bold leading-snug text-text">
+              <h3 className="text-[24px] font-extrabold leading-snug text-text sm:text-[27px]">
                 {service.title}
               </h3>
-              <p className="mb-6 text-[13px] leading-[1.8] text-text-muted">
-                {service.desc}
-              </p>
-
-              <a
-                href={`${WA_LINK}${encodeURIComponent(service.title)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[13px] font-semibold text-primary transition-colors hover:text-accent"
-              >
-                Request Quote
-                <i className="fas fa-arrow-right text-[10px] transition-transform duration-200 group-hover:translate-x-1"></i>
-              </a>
             </div>
           ))}
         </div>
