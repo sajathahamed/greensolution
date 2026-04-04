@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 
-const WA_LINK =
-  "https://api.whatsapp.com/send?phone=94775354349&text=Hello%20Green%20Solution%2C%20I%20need%20pest%20control%20services";
+const WA_NUMBER = "94775354349";
+// WhatsApp call link - initiates a direct call
+const WA_CALL_LINK = `https://wa.me/${WA_NUMBER}`;
 
 export default function WhatsAppBubble() {
   const [visible, setVisible] = useState(false);
@@ -17,11 +18,12 @@ export default function WhatsAppBubble() {
 
   return (
     <a
-      href={WA_LINK}
+      href={WA_CALL_LINK}
       target="_blank"
       rel="noopener noreferrer"
-      className="animate-float-bounce fixed bottom-24 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-xl transition-transform hover:scale-110 md:flex"
-      aria-label="Chat on WhatsApp"
+      className="animate-float-bounce fixed bottom-24 right-6 z-40 hidden h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-[#25D366] to-emerald-500 text-white shadow-xl transition-all hover:scale-110 hover:shadow-2xl md:flex"
+      aria-label="Call on WhatsApp"
+      title="Click to call via WhatsApp"
     >
       <i className="fab fa-whatsapp text-3xl"></i>
     </a>

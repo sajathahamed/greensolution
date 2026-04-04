@@ -48,7 +48,7 @@ export default function QuotationForm() {
             Get Your Quotation
           </h2>
           <p className="text-[13px] text-black/60 sm:text-sm">
-            Fill in your details and we will respond within 30 minutes
+            Fill in your details and we will respond within a day.
           </p>
         </div>
 
