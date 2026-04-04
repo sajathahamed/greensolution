@@ -2,19 +2,19 @@ const services = [
   {
     icon: "fa-bug",
     title: "Pest Management",
-   
+    desc: "Comprehensive pest control for residential, commercial, and agricultural properties with safe and effective treatment solutions.",
     slug: "pest-management",
   },
   {
     icon: "fa-shield-alt",
     title: "Termite Control",
-    //desc: "Advanced anti-termite treatment (වේයන් මර්දනය) using baiting and liquid barrier systems. Pre and post-construction protection with up to 5-year warranty.",
+    desc: "Advanced anti-termite treatment using baiting and liquid barrier systems for long-term structural protection.",
     slug: "termite-control",
   },
   {
     icon: "fa-microscope",
     title: "Environmental Engineering Consultancy",
-    //desc: "Licensed environmental assessments, site inspections, impact evaluations and compliance consulting for projects across Sri Lanka.",
+    desc: "Licensed assessments, site inspections, impact evaluations, and compliance consulting for projects across Sri Lanka.",
     slug: "environmental-engineering",
   },
 ];
@@ -56,7 +56,7 @@ export default function Services() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-            {services.map((service, index) => (
+            {services.map((service) => (
               <div
                 key={service.slug}
                 className="group relative rounded-2xl border border-green-100 bg-gradient-to-br from-green-50 to-white p-6 text-center transition-all duration-300 hover:border-[#25D366] hover:shadow-lg hover:-translate-y-1"
