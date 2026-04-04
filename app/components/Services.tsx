@@ -71,7 +71,7 @@ export default function Services() {
                   {service.title}
                 </h4>
                 <p className="text-sm leading-relaxed text-gray-600">
-                  {service.desc}
+                  
                 </p>
               </div>
             ))}
