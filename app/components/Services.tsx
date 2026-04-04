@@ -2,19 +2,19 @@ const services = [
   {
     icon: "fa-bug",
     title: "Pest Management",
-    desc: "Comprehensive pest control for residential, commercial, and agricultural properties with safe and effective treatment solutions.",
+    //desc: "Comprehensive pest control for residential, commercial, and agricultural properties with safe and effective treatment solutions.",
     slug: "pest-management",
   },
   {
     icon: "fa-shield-alt",
     title: "Termite Control",
-    desc: "Advanced anti-termite treatment using baiting and liquid barrier systems for long-term structural protection.",
+    //desc: "Advanced anti-termite treatment using baiting and liquid barrier systems for long-term structural protection.",
     slug: "termite-control",
   },
   {
     icon: "fa-microscope",
     title: "Environmental Engineering Consultancy",
-    desc: "Licensed assessments, site inspections, impact evaluations, and compliance consulting for projects across Sri Lanka.",
+    //desc: "Licensed assessments, site inspections, impact evaluations, and compliance consulting for projects across Sri Lanka.",
     slug: "environmental-engineering",
   },
 ];
