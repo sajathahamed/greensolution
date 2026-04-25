@@ -26,6 +26,24 @@ body {
   color: var(--color-text);
 }
 
+.hero-company-title {
+  font-family: "Arial Black", "Segoe UI", "Franklin Gothic Medium", "Trebuchet MS", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+.gallery-classic-title {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  letter-spacing: 0.04em;
+}
+
+.footer-brand-rentokil {
+  font-family: "Avenir Next", "Montserrat", "Arial Black", "Segoe UI", sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1;
+}
+
 /* Pulse animation for CTA buttons */
 @keyframes pulse-glow {
   0%, 100% {

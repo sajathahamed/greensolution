@@ -2,6 +2,12 @@ export default function Footer() {
   return (
     <footer id="footer" className="w-full bg-[#071f07] text-white">
       <div className="mx-auto max-w-5xl px-6 pb-10 pt-16 sm:px-8">
+        <div className="mb-10 text-center">
+          <p className="footer-brand-rentokil text-[2rem] text-[#ff2942] sm:text-[2.8rem]">
+            Green Solution
+          </p>
+        </div>
+
         <div className="mx-auto max-w-md">
           <div>
             <h4 className="mb-4 text-[10px] font-bold uppercase tracking-[0.2em] text-white/20">

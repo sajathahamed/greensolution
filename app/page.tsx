@@ -9,6 +9,7 @@ import ServiceAreas from "./components/ServiceAreas";
 import QuotationForm from "./components/QuotationForm";
 import HowItWorks from "./components/HowItWorks";
 import Footer from "./components/Footer";
+import TermiteGallery from "./components/TermiteGallery";
 import FloatingCTA from "./components/FloatingCTA";
 import WhatsAppBubble from "./components/WhatsAppBubble";
 import BackToTop from "./components/BackToTop";
@@ -58,6 +59,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <TermiteGallery />
 
       <FloatingCTA />
       <WhatsAppBubble />

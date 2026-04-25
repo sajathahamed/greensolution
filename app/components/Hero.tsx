@@ -8,42 +8,39 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#062106] via-[#0e3a0e] to-[#1B5E20] px-5 text-center text-white sm:px-8"
+      className="relative flex min-h-[100dvh] w-full flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-[#062106] via-[#0e3a0e] to-[#1B5E20] px-5 text-white sm:px-8"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,_rgba(76,175,80,0.08)_0%,_transparent_60%)]"></div>
 
       <div className="relative z-10 w-full max-w-4xl py-16 sm:py-20">
-        {/* Logo */}
-        <div className="mb-12 flex justify-center sm:mb-14">
+        {/* Brand heading with logo on the left */}
+        <div className="mb-10 flex items-start gap-4 rounded-3xl bg-white/95 p-3 pr-4 shadow-[0_14px_45px_rgba(0,0,0,0.28)] sm:mb-12 sm:gap-5 sm:p-4 sm:pr-5">
           <Image
             src="/logo.jpeg"
             alt="Green Solution Pest Management & Environmental Engineering Consultancy Sri Lanka"
-            width={140}
-            height={140}
+            width={250}
+            height={250}
             priority
-            className="h-28 w-28 rounded-3xl border-[3px] border-white/15 object-cover shadow-[0_20px_60px_rgba(0,0,0,0.4)] sm:h-32 sm:w-32"
+            className="h-28 w-28 rounded-2xl border-[3px] border-[#0A2E78]/10 object-cover shadow-[0_16px_32px_rgba(10,46,120,0.2)] sm:h-36 sm:w-36"
           />
+
+          <h1 className="hero-company-title text-[1.55rem] leading-[1.03] text-[#0A2E78] sm:text-[2.15rem] md:text-[2.8rem] lg:text-[3.2rem]">
+            <span className="block">Green Solution Pest Management</span>
+            <span className="mt-1 block">Environmental Engineering Consultancy</span>
+          </h1>
         </div>
 
-        {/* Company Name — single line */}
-        <h1 className="mb-3 text-[1.3rem] font-extrabold leading-[1.1] tracking-tight sm:whitespace-nowrap sm:text-[2rem] md:text-[2.75rem] lg:text-[3.25rem]">
-          Green Solution Pest Management
-        </h1>
-        <p className="text-base font-semibold text-accent-light sm:text-lg md:text-xl lg:text-2xl">
-          Environmental Engineering Consultancy
-        </p>
-
         {/* Divider */}
-        <div className="mx-auto my-2 h-px w-14 bg-white/12 sm:my-4"></div>
+        <div className="my-2 h-px w-14 bg-white/12 sm:my-4"></div>
 
         {/* Headline */}
-        <p className="text-[15px] font-medium text-white/70 sm:text-base md:text-lg">
+        <p className="text-center text-[15px] font-medium text-white/70 sm:text-base md:text-lg">
           Protect Your Valuable Home From
         </p>
-        <p className="mt-1 text-xl font-extrabold sm:text-2xl md:text-3xl">
+        <p className="mt-1 text-center text-xl font-extrabold sm:text-2xl md:text-3xl">
           Subterranean Termites
         </p>
-        <p className="mt-3 text-[12px] font-medium tracking-wide text-white sm:text-[13px]">
+        <p className="mt-3 text-center text-[12px] font-medium tracking-wide text-white sm:text-[13px]">
           The Most Destructive Structural Pest in the World
         </p>
 
