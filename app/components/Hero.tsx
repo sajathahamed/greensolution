@@ -26,7 +26,7 @@ export default function Hero() {
 
           <h1 className="hero-company-title min-w-0 text-[1.5rem] leading-[1.06] text-[#0A2E78] sm:text-[2.0rem] md:text-[2.0rem] lg:text-[2.4rem]">
             <span className="block md:whitespace-nowrap">Green Solution Pest Management</span>
-            <span className="mt-1 block md:whitespace-nowrap">Environmental Engineering Consultancy</span>
+            <span className="mt-7 block md:whitespace-nowrap">Environmental Engineering Consultancy</span>
           </h1>
         </div>
 
@@ -44,11 +44,11 @@ export default function Hero() {
 
         {/* Multilingual */}
         <div className="mt-6 flex items-center justify-center gap-3 text-[12px] sm:gap-5 sm:text-[13px]">
-          <span className="font-medium text-secondary-light/80">වේයන් මර්දනය</span>
+          <span className="font-medium text-blue-700">වේයන් මර්දනය</span>
           <span className="text-white/15">|</span>
           <span className="font-medium text-accent-light/80">கிருமி கட்டுப்பாடு</span>
           <span className="text-white/15">|</span>
-          <span className="font-medium text-white/50">Termite Control</span>
+          <span className="font-medium text-blue-700">Termite Control</span>
         </div>
 
         {/* CTA Buttons */}
@@ -77,15 +77,15 @@ export default function Hero() {
           <div className="mb-6 flex items-center justify-center gap-6 text-[12px] text-white/55 sm:gap-8 sm:text-[13px]">
             <span className="flex items-center gap-2">
               <i className="fas fa-certificate text-accent-light"></i>
-              Licensed
+              <span className="text-blue-700">Licensed</span>
             </span>
             <span className="flex items-center gap-2">
               <i className="fas fa-shield-alt text-accent-light"></i>
-              Warranty
+              <span className="text-blue-700">Warranty</span>
             </span>
             <span className="flex items-center gap-2">
               <i className="fas fa-leaf text-accent-light"></i>
-              Eco-Safe
+              <span className="text-blue-700">Eco-Safe</span>
             </span>
           </div>
 

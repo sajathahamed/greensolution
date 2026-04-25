@@ -3,7 +3,7 @@ export default function Footer() {
     <footer id="footer" className="w-full bg-gradient-to-b from-[#dceeff] via-[#cfe6ff] to-[#c6e0ff] text-[#0d2b63]">
       <div className="mx-auto max-w-5xl px-6 pb-10 pt-16 sm:px-8">
         <div className="mb-10 text-center">
-          <p className="footer-brand-rentokil text-[1.5rem] text-[#e11d48] sm:text-[2.3rem]">
+          <p className="footer-brand-rentokil text-[1.5rem] text-black sm:text-[2.3rem]">
             <span className="block">Green Solution Pest Management</span>
           </p>
         </div>

@@ -56,6 +56,17 @@ export default function TermiteGallery() {
             <i className="fab fa-youtube text-base text-red-600"></i>
             Watch Our YouTube Video
           </a>
+          <div className="mt-4">
+            <a
+              href="https://share.google/F0w3526i4eK6sqXjz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-blue-700 bg-white px-6 py-2.5 text-sm font-semibold text-blue-700 transition-colors hover:bg-blue-50"
+            >
+              <i className="fas fa-link text-base text-blue-700"></i>
+              View Our Google Share
+            </a>
+          </div>
         </div>
       </div>
     </section>
