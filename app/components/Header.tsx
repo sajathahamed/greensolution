@@ -32,7 +32,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-5 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-3">
+        <a href="#home" className="flex min-w-0 items-center gap-2 sm:gap-3">
           <Image
             src="/logo.jpeg"
             alt="Green Solution Pest Control Sri Lanka - Environmental Engineering Consultancy"
@@ -42,15 +42,15 @@ export default function Header() {
               scrolled ? "h-9 w-9" : "h-10 w-10"
             }`}
           />
-          <span className="flex flex-col">
+          <span className="flex min-w-0 flex-col">
             <span
-              className={`font-bold text-primary transition-all duration-300 ${
-                scrolled ? "text-[13px]" : "text-[15px]"
+              className={`max-w-[180px] overflow-hidden text-ellipsis whitespace-nowrap font-bold text-primary transition-all duration-300 sm:max-w-[280px] ${
+                scrolled ? "text-[11px] sm:text-[13px]" : "text-[12px] sm:text-[15px]"
               }`}
             >
-              Green Solution
+              Green Solution Pest Management
             </span>
-            <span className="hidden text-[8px] font-semibold uppercase tracking-[0.15em] text-text-muted lg:block">
+            <span className="max-w-[180px] overflow-hidden text-ellipsis whitespace-nowrap text-[8px] font-semibold tracking-[0.02em] text-text-muted sm:max-w-[280px] sm:text-[10px]">
               Environmental Engineering Consultancy
             </span>
           </span>

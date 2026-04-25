@@ -15,10 +15,10 @@ export default function UrgencyBanner() {
   return (
     <section id="urgency" className="w-full overflow-hidden bg-[#071f07] py-2.5">
       <div className="animate-marquee flex whitespace-nowrap">
-        <span className="inline-block text-[12px] font-medium tracking-wide text-white/50">
+        <span className="inline-block text-[14px] font-medium tracking-wide text-white/50">
           {fullMessage}
         </span>
-        <span className="inline-block text-[12px] font-medium tracking-wide text-white/50">
+        <span className="inline-block text-[14px] font-medium tracking-wide text-white/50">
           {fullMessage}
         </span>
       </div>

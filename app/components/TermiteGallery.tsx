@@ -1,44 +1,20 @@
 const pestPhotos = [
-  {
-    src: "https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=900&q=80",
-    title: "Termite Damage Inspection",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1595231776515-ddffb1f4eb73?auto=format&fit=crop&w=900&q=80",
-    title: "Cockroach Monitoring",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80",
-    title: "Rodent Risk Area",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1561134643-668f9057cce0?auto=format&fit=crop&w=900&q=80",
-    title: "Mosquito Source Check",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=900&q=80",
-    title: "Bed Bug Detection",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1621451537084-482c73073a0f?auto=format&fit=crop&w=900&q=80",
-    title: "Wall Cavity Treatment",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1618336753974-aae8e04506aa?auto=format&fit=crop&w=900&q=80",
-    title: "Safe Chemical Handling",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=900&q=80",
-    title: "Outdoor Pest Control",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=900&q=80",
-    title: "Residential Prevention",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1545243424-0ce743321e11?auto=format&fit=crop&w=900&q=80",
-    title: "Professional Site Visit",
-  },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.14%20AM.jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.14%20AM%20(1).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.15%20AM.jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.15%20AM%20(1).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.15%20AM%20(2).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.16%20AM.jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.16%20AM%20(1).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.17%20AM.jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.17%20AM%20(1).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.17%20AM%20(2).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.18%20AM.jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.18%20AM%20(1).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.19%20AM.jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.19%20AM%20(1).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.19%20AM%20(2).jpeg" },
+  { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.46.27%20AM.jpeg" },
 ];
 
 export default function TermiteGallery() {
@@ -62,13 +38,10 @@ export default function TermiteGallery() {
             >
               <img
                 src={photo.src}
-                alt={photo.title}
+                alt="Gallery photo"
                 loading="lazy"
                 className="h-36 w-full object-cover sm:h-40"
               />
-              <figcaption className="px-2 py-2 text-center text-[11px] font-medium text-[#2b2b2b] sm:text-xs">
-                {photo.title}
-              </figcaption>
             </figure>
           ))}
         </div>

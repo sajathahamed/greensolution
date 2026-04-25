@@ -12,21 +12,21 @@ export default function Hero() {
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,_rgba(76,175,80,0.08)_0%,_transparent_60%)]"></div>
 
-      <div className="relative z-10 w-full max-w-4xl py-16 sm:py-20">
+      <div className="relative z-10 w-full max-w-5xl py-16 sm:py-20">
         {/* Brand heading with logo on the left */}
-        <div className="mb-10 flex items-start gap-4 rounded-3xl bg-white/95 p-3 pr-4 shadow-[0_14px_45px_rgba(0,0,0,0.28)] sm:mb-12 sm:gap-5 sm:p-4 sm:pr-5">
+        <div className="mb-10 flex items-start gap-4 rounded-3xl bg-white p-3 pr-4 shadow-[0_14px_45px_rgba(0,0,0,0.28)] sm:mb-12 sm:gap-5 sm:p-4 sm:pr-5">
           <Image
             src="/logo.jpeg"
             alt="Green Solution Pest Management & Environmental Engineering Consultancy Sri Lanka"
             width={250}
             height={250}
             priority
-            className="h-28 w-28 rounded-2xl border-[3px] border-[#0A2E78]/10 object-cover shadow-[0_16px_32px_rgba(10,46,120,0.2)] sm:h-36 sm:w-36"
+            className="h-28 w-28 rounded-2xl border-[3px] border-[#0A2E78]/20 object-cover shadow-[0_16px_32px_rgba(10,46,120,0.2)] sm:h-36 sm:w-36"
           />
 
-          <h1 className="hero-company-title text-[1.55rem] leading-[1.03] text-[#0A2E78] sm:text-[2.15rem] md:text-[2.8rem] lg:text-[3.2rem]">
-            <span className="block">Green Solution Pest Management</span>
-            <span className="mt-1 block">Environmental Engineering Consultancy</span>
+          <h1 className="hero-company-title min-w-0 text-[1.5rem] leading-[1.06] text-[#0A2E78] sm:text-[2.0rem] md:text-[2.0rem] lg:text-[2.4rem]">
+            <span className="block md:whitespace-nowrap">Green Solution Pest Management</span>
+            <span className="mt-1 block md:whitespace-nowrap">Environmental Engineering Consultancy</span>
           </h1>
         </div>
 
@@ -34,11 +34,9 @@ export default function Hero() {
         <div className="my-2 h-px w-14 bg-white/12 sm:my-4"></div>
 
         {/* Headline */}
-        <p className="text-center text-[15px] font-medium text-white/70 sm:text-base md:text-lg">
-          Protect Your Valuable Home From
-        </p>
-        <p className="mt-1 text-center text-xl font-extrabold sm:text-2xl md:text-3xl">
-          Subterranean Termites
+        <p className="text-center text-xl font-extrabold text-white sm:text-2xl md:text-3xl">
+          <span className="block md:whitespace-nowrap">Protect Your Valuable Home</span>
+          <span className="block md:whitespace-nowrap">From Subterranean Termites</span>
         </p>
         <p className="mt-3 text-center text-[12px] font-medium tracking-wide text-white sm:text-[13px]">
           The Most Destructive Structural Pest in the World

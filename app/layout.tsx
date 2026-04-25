@@ -10,19 +10,44 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  // SEO: base URL used for canonical and social URLs.
+  metadataBase: new URL("https://greensolutionpest.lk"),
+  // SEO: homepage title targetting high-intent pest-control queries.
   title:
     "Pest Control Sri Lanka | Green Solution — Termite Control & Environmental Engineering",
+  // SEO: multilingual description using primary service + location intent.
   description:
     "Professional pest control & termite treatment in Batticaloa, Trincomalee, Ampara & all island Sri Lanka. Licensed environmental engineering consultancy. கிருமி கட்டுப்பாடு | කෘමි පාලනය. Call 077 535 4349.",
+  // SEO: core search phrases requested for ranking coverage.
   keywords:
-    "pest control Sri Lanka, pest control Batticaloa, termite control, termite treatment Sri Lanka, cockroach control, rodent removal, environmental engineering consultancy, anti termite treatment, pest control near me, கிருமி கட்டுப்பாடு, kirumi kattupadu, කෘමි පාලනය, වේයන් මර්දනය, pest management Eastern Province, Green Solution Pest Management, pest control Trincomalee, pest control Ampara, pest control Colombo, pest control Kandy, pest control Jaffna, eco-friendly pest control",
+    "green solution pest management, green solution pest control, pest management, pest control, termite control, anti termite, anti termite treatment, termite proofing, termite treatment Sri Lanka, pest control Sri Lanka, pest control Batticaloa, pest control Trincomalee, pest control Ampara, all island pest control, environmental engineering consultancy, cockroach control, rat control, mosquito control, bed bug control, pest control near me, கிருமி கட்டுப்பாடு, kirumi kattupadu, කෘමි පාලනය, වේයන් මර්දනය, මකුළු මර්දනය",
+  applicationName: "Green Solution Pest Management",
+  category: "Pest Control Service",
+  creator: "Green Solution Pest Management",
+  publisher: "Green Solution Pest Management",
   openGraph: {
     title: "Green Solution Pest Management & Environmental Engineering Consultancy",
     description:
       "Licensed pest control & environmental engineering in Sri Lanka. Termite treatment, pest management across Batticaloa, Trincomalee, Ampara & all island. கிருமி கட்டுப்பாடு | කෘමි පාලනය.",
+    url: "https://greensolutionpest.lk",
     type: "website",
     locale: "en_LK",
     siteName: "Green Solution Pest Management",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Green Solution Pest Management",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Green Solution Pest Management & Environmental Engineering Consultancy",
+    description:
+      "Termite control, anti-termite treatment, and pest management in Batticaloa, Trincomalee, Ampara & all island Sri Lanka.",
+    images: ["/logo.jpeg"],
   },
   alternates: {
     canonical: "https://greensolutionpest.lk",
@@ -42,6 +67,9 @@ export const metadata: Metadata = {
     "geo.region": "LK",
     "geo.placename": "Batticaloa",
     "content-language": "en,ta,si",
+    // SEO: additional keyword cluster for crawlers that parse custom meta tags.
+    "search-terms":
+      "Green Solution Pest Management, Pest Control, Termite Control, Anti Termite, Batticaloa, Trincomalee, Ampara, All Island Sri Lanka",
   },
 };
 
