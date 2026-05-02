@@ -21,15 +21,6 @@ export default function TermiteGallery() {
   return (
     <section className="w-full bg-[#f6f7f4] px-5 py-14 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-8 text-center sm:mb-10">
-          <div className="mx-auto mb-3 h-[3px] w-full max-w-[860px] bg-[#4f8f3e]"></div>
-          <h3 className="gallery-classic-title text-[1.25rem] leading-[1.25] text-[#1f1f1f] sm:text-[1.8rem]">
-            <span className="block">-Environmental Engineering Consultancy -</span>
-            <span className="block">-Professionals in Termite Proofing-</span>
-          </h3>
-          <div className="mx-auto mt-3 h-[3px] w-full max-w-[860px] bg-[#4f8f3e]"></div>
-        </div>
-
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
           {pestPhotos.map((photo) => (
             <figure
@@ -66,6 +57,15 @@ export default function TermiteGallery() {
               <i className="fas fa-link text-base text-blue-700"></i>
               View Our Google Share
             </a>
+          </div>
+
+          <div className="mt-8 text-center sm:mt-10">
+            <div className="mx-auto mb-3 h-[3px] w-full max-w-[860px] bg-[#4f8f3e]"></div>
+            <h3 className="gallery-classic-title text-[1.25rem] leading-[1.25] text-[#1f1f1f] sm:text-[1.8rem]">
+              <span className="block">-Environmental Engineering Consultancy -</span>
+              <span className="block">-Professionals in Termite Proofing-</span>
+            </h3>
+            <div className="mx-auto mt-3 h-[3px] w-full max-w-[860px] bg-[#4f8f3e]"></div>
           </div>
         </div>
       </div>

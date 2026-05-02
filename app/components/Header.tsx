@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 
 const PHONE = "+94775354349";
-const PHONE_DISPLAY = "077 535 4349";
+const PHONE_DISPLAY = "077 5354 349";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);

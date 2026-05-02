@@ -13,21 +13,25 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,_rgba(76,175,80,0.08)_0%,_transparent_60%)]"></div>
 
       <div className="relative z-10 w-full max-w-5xl py-16 sm:py-20">
-        {/* Brand heading with logo on the left */}
-        <div className="mb-10 flex items-start gap-4 rounded-3xl bg-white p-3 pr-4 shadow-[0_14px_45px_rgba(0,0,0,0.28)] sm:mb-12 sm:gap-5 sm:p-4 sm:pr-5">
+        {/* Brand heading with logo outside on the left */}
+        <div className="mb-10 flex items-center gap-0 sm:mb-12">
+          {/* Logo outside the box */}
           <Image
             src="/logo.jpeg"
             alt="Green Solution Pest Management & Environmental Engineering Consultancy Sri Lanka"
             width={250}
             height={250}
             priority
-            className="h-28 w-28 rounded-2xl border-[3px] border-[#0A2E78]/20 object-cover shadow-[0_16px_32px_rgba(10,46,120,0.2)] sm:h-36 sm:w-36"
+            className="h-28 w-28 shrink-0 rounded-2xl border-[3px] border-[#0A2E78]/20 object-cover shadow-[0_16px_32px_rgba(10,46,120,0.2)] sm:h-36 sm:w-36"
           />
 
-          <h1 className="hero-company-title min-w-0 text-[1.5rem] leading-[1.06] text-[#0A2E78] sm:text-[2.0rem] md:text-[2.0rem] lg:text-[2.4rem]">
-            <span className="block md:whitespace-nowrap">Green Solution Pest Management</span>
-            <span className="mt-7 block md:whitespace-nowrap">Environmental Engineering Consultancy</span>
-          </h1>
+          {/* White box with text only */}
+          <div className="flex-1 rounded-none bg-white py-2 px-4 shadow-[0_14px_45px_rgba(0,0,0,0.28)] sm:py-3 sm:px-5">
+            <h1 className="hero-company-title text-[1.5rem] leading-[1.06] text-[#0A2E78] sm:text-[2.0rem] md:text-[2.0rem] lg:text-[2.4rem]">
+              <span className="block md:whitespace-nowrap">Green Solution Pest Management</span>
+              <span className="mt-7 block md:whitespace-nowrap">Environmental Engineering Consultancy</span>
+            </h1>
+          </div>
         </div>
 
         {/* Divider */}
@@ -44,11 +48,13 @@ export default function Hero() {
 
         {/* Multilingual */}
         <div className="mt-6 flex items-center justify-center gap-3 text-[12px] sm:gap-5 sm:text-[13px]">
-          <span className="font-medium text-blue-700">වේයන් මර්දනය</span>
+          <span className="font-medium text-accent-light/80">වේයන් මර්දනය</span>
           <span className="text-white/15">|</span>
           <span className="font-medium text-accent-light/80">கிருமி கட்டுப்பாடு</span>
           <span className="text-white/15">|</span>
-          <span className="font-medium text-blue-700">Termite Control</span>
+          <span className="font-medium text-accent-light/80">கரையான் கட்டுப்பாடு</span>
+          <span className="text-white/15">|</span>
+          <span className="font-medium text-accent-light/80">Termite Control</span>
         </div>
 
         {/* CTA Buttons */}
@@ -77,15 +83,15 @@ export default function Hero() {
           <div className="mb-6 flex items-center justify-center gap-6 text-[12px] text-white/55 sm:gap-8 sm:text-[13px]">
             <span className="flex items-center gap-2">
               <i className="fas fa-certificate text-accent-light"></i>
-              <span className="text-blue-700">Licensed</span>
+              <span className="font-medium text-accent-light/80">Licensed</span>
             </span>
             <span className="flex items-center gap-2">
               <i className="fas fa-shield-alt text-accent-light"></i>
-              <span className="text-blue-700">Warranty</span>
+              <span className="font-medium text-accent-light/80">Warranty</span>
             </span>
             <span className="flex items-center gap-2">
               <i className="fas fa-leaf text-accent-light"></i>
-              <span className="text-blue-700">Eco-Safe</span>
+              <span className="font-medium text-accent-light/80">Eco-Safe</span>
             </span>
           </div>
 
