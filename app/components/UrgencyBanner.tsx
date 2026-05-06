@@ -1,9 +1,9 @@
 export default function UrgencyBanner() {
   const items = [
     "Termite season is here — Call now for FREE inspection",
-    "500+ properties protected across Sri Lanka",
-    "Licensed Pest Control & Environmental Engineering",
-    "වේයන් මර්දනය | கிருமி கட்டுப்பாடு | Termite Control",
+    "2000+ properties protected across Sri Lanka",
+    "Licensed Pest Control & Environmental Engineering Consultancy",
+    "වේයන් මර්දනය | கிருமி கட்டுப்பாடு |கரையான் கட்டுப்பாடு |Termite Control",
   ];
 
   const message = items

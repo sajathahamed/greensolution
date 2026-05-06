@@ -66,16 +66,36 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <a
-            href={`tel:${PHONE}`}
-            className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[13px] font-bold text-white transition-colors hover:bg-accent-dark"
-          >
-            <i className="fas fa-phone text-[10px]"></i>
-            {PHONE_DISPLAY}
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href={`https://wa.me/${PHONE.replace('+', '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white transition-colors hover:bg-[#1da851]"
+              aria-label="WhatsApp"
+            >
+              <i className="fab fa-whatsapp text-lg"></i>
+            </a>
+            <a
+              href={`tel:${PHONE}`}
+              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[13px] font-bold text-white transition-colors hover:bg-accent-dark"
+            >
+              <i className="fas fa-phone text-[10px]"></i>
+              {PHONE_DISPLAY}
+            </a>
+          </div>
         </nav>
 
-        <div className="flex items-center gap-3 lg:hidden">
+        <div className="flex items-center gap-2 lg:hidden">
+          <a
+            href={`https://wa.me/${PHONE.replace('+', '')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white"
+            aria-label="WhatsApp"
+          >
+            <i className="fab fa-whatsapp text-sm"></i>
+          </a>
           <a
             href={`tel:${PHONE}`}
             className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[11px] font-bold text-white"
