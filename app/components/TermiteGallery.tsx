@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, useEffect } from "react";
+
 const pestPhotos = [
   { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.14%20AM.jpeg" },
   { src: "/gallery/WhatsApp%20Image%202026-04-25%20at%209.44.14%20AM%20(1).jpeg" },
@@ -18,14 +22,54 @@ const pestPhotos = [
 ];
 
 export default function TermiteGallery() {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!selectedImage) return;
+      if (e.key === "Escape") setSelectedImage(null);
+      if (e.key === "ArrowRight") {
+        const nextIndex = (currentIndex + 1) % pestPhotos.length;
+        setCurrentIndex(nextIndex);
+        setSelectedImage(pestPhotos[nextIndex].src);
+      }
+      if (e.key === "ArrowLeft") {
+        const prevIndex = (currentIndex - 1 + pestPhotos.length) % pestPhotos.length;
+        setCurrentIndex(prevIndex);
+        setSelectedImage(pestPhotos[prevIndex].src);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImage, currentIndex]);
+
+  const openLightbox = (src: string, index: number) => {
+    setSelectedImage(src);
+    setCurrentIndex(index);
+  };
+
+  const goNext = () => {
+    const nextIndex = (currentIndex + 1) % pestPhotos.length;
+    setCurrentIndex(nextIndex);
+    setSelectedImage(pestPhotos[nextIndex].src);
+  };
+
+  const goPrev = () => {
+    const prevIndex = (currentIndex - 1 + pestPhotos.length) % pestPhotos.length;
+    setCurrentIndex(prevIndex);
+    setSelectedImage(pestPhotos[prevIndex].src);
+  };
+
   return (
     <section className="w-full bg-[#f6f7f4] px-5 py-14 sm:px-8 sm:py-16">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3 lg:grid-cols-5">
-          {pestPhotos.map((photo) => (
+          {pestPhotos.map((photo, index) => (
             <figure
               key={photo.src}
-              className="overflow-hidden rounded-xl border border-[#dce5d8] bg-white shadow-sm"
+              onClick={() => openLightbox(photo.src, index)}
+              className="cursor-pointer overflow-hidden rounded-xl border border-[#dce5d8] bg-white shadow-sm transition-transform duration-200 hover:scale-105 hover:shadow-lg"
             >
               <img
                 src={photo.src}
@@ -69,6 +113,60 @@ export default function TermiteGallery() {
           </div>
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Close button */}
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            aria-label="Close"
+          >
+            <i className="fas fa-times text-xl"></i>
+          </button>
+
+          {/* Previous button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              goPrev();
+            }}
+            className="absolute left-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            aria-label="Previous image"
+          >
+            <i className="fas fa-chevron-left text-xl"></i>
+          </button>
+
+          {/* Image */}
+          <img
+            src={selectedImage}
+            alt="Gallery preview"
+            onClick={(e) => e.stopPropagation()}
+            className="max-h-[85vh] max-w-[90vw] rounded-lg object-contain shadow-2xl"
+          />
+
+          {/* Next button */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              goNext();
+            }}
+            className="absolute right-4 z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            aria-label="Next image"
+          >
+            <i className="fas fa-chevron-right text-xl"></i>
+          </button>
+
+          {/* Image counter */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-white/10 px-4 py-2 text-sm text-white">
+            {currentIndex + 1} / {pestPhotos.length}
+          </div>
+        </div>
+      )}
     </section>
   );
 }

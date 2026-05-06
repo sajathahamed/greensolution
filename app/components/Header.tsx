@@ -66,43 +66,57 @@ export default function Header() {
               {link.label}
             </a>
           ))}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 rounded-full bg-accent px-3 py-2 transition-colors hover:bg-accent-dark">
             <a
               href={`https://wa.me/${PHONE.replace('+', '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#25D366] text-white transition-colors hover:bg-[#1da851]"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-[#25D366] text-white transition-transform hover:scale-110"
               aria-label="WhatsApp"
             >
-              <i className="fab fa-whatsapp text-lg"></i>
+              <i className="fab fa-whatsapp text-sm"></i>
             </a>
             <a
               href={`tel:${PHONE}`}
-              className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-2.5 text-[13px] font-bold text-white transition-colors hover:bg-accent-dark"
+              className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-white/20 text-white transition-transform hover:scale-110"
+              aria-label="Call"
             >
               <i className="fas fa-phone text-[10px]"></i>
+            </a>
+            <a
+              href={`tel:${PHONE}`}
+              className="ml-1 text-[13px] font-bold text-white"
+            >
               {PHONE_DISPLAY}
             </a>
           </div>
         </nav>
 
         <div className="flex items-center gap-2 lg:hidden">
-          <a
-            href={`https://wa.me/${PHONE.replace('+', '')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#25D366] text-white"
-            aria-label="WhatsApp"
-          >
-            <i className="fab fa-whatsapp text-sm"></i>
-          </a>
-          <a
-            href={`tel:${PHONE}`}
-            className="inline-flex items-center gap-1.5 rounded-full bg-accent px-4 py-2 text-[11px] font-bold text-white"
-          >
-            <i className="fas fa-phone text-[9px]"></i>
-            Call
-          </a>
+          <div className="flex items-center gap-1 rounded-full bg-accent px-2 py-1.5">
+            <a
+              href={`https://wa.me/${PHONE.replace('+', '')}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-[#25D366] text-white"
+              aria-label="WhatsApp"
+            >
+              <i className="fab fa-whatsapp text-xs"></i>
+            </a>
+            <a
+              href={`tel:${PHONE}`}
+              className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/20 text-white"
+              aria-label="Call"
+            >
+              <i className="fas fa-phone text-[8px]"></i>
+            </a>
+            <a
+              href={`tel:${PHONE}`}
+              className="ml-0.5 text-[10px] font-bold text-white"
+            >
+              {PHONE_DISPLAY}
+            </a>
+          </div>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="flex h-9 w-9 items-center justify-center rounded-xl text-primary"
