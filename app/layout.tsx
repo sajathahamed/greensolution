@@ -11,7 +11,7 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   // SEO: base URL used for canonical and social URLs.
-  metadataBase: new URL("https://greensolutionpest.lk"),
+  metadataBase: new URL("https://greensolution.lk"),
   // SEO: homepage title targetting high-intent pest-control queries.
   title:
     "Pest Control Sri Lanka | Green Solution — Termite Control & Environmental Engineering",
