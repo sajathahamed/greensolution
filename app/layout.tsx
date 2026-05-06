@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Green Solution Pest Management & Environmental Engineering Consultancy",
     description:
       "Licensed pest control & environmental engineering in Sri Lanka. Termite treatment, pest management across Batticaloa, Trincomalee, Ampara & all island. கிருமி கட்டுப்பாடு | කෘමි පාලනය.",
-    url: "https://greensolutionpest.lk",
+    url: "https://greensolution.lk",
     type: "website",
     locale: "en_LK",
     siteName: "Green Solution Pest Management",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     images: ["/logo.jpeg"],
   },
   alternates: {
-    canonical: "https://greensolutionpest.lk",
+    canonical: "https://greensolution.lk",
   },
   robots: {
     index: true,
@@ -81,7 +81,7 @@ const jsonLd = [
     alternateName: ["Green Solution", "கிரீன் சொல்யூஷன்", "ග්‍රීන් සොලූෂන්"],
     description:
       "Licensed pest control and environmental engineering consultancy in Sri Lanka. Specializing in termite control (වේයන් මර්දනය / கிருமி கட்டுப்பாடு), pest management, and environmental engineering. Serving Batticaloa, Trincomalee, Ampara & all island.",
-    url: "https://greensolutionpest.lk",
+    url: "https://greensolution.lk",
     telephone: "+94775354349",
     email: "greensolutionpm@gmail.com",
     areaServed: [
@@ -137,7 +137,7 @@ const jsonLd = [
       closes: "20:00",
     },
     priceRange: "Rs. 2,500 - Rs. 25,000",
-    image: "https://greensolutionpest.lk/logo.jpeg",
+    image: "https://greensolution.lk/logo.jpeg",
     sameAs: [
       "https://wa.me/94775354349",
     ],
@@ -203,11 +203,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={roboto.variable} suppressHydrationWarning>
       <head>
-        <link rel="canonical" href="https://greensolutionpest.lk" />
-        <link rel="alternate" hrefLang="en" href="https://greensolutionpest.lk" />
-        <link rel="alternate" hrefLang="ta" href="https://greensolutionpest.lk" />
-        <link rel="alternate" hrefLang="si" href="https://greensolutionpest.lk" />
-        <link rel="alternate" hrefLang="x-default" href="https://greensolutionpest.lk" />
+        <link rel="canonical" href="https://greensolution.lk" />
+        <link rel="alternate" hrefLang="en" href="https://greensolution.lk" />
+        <link rel="alternate" hrefLang="ta" href="https://greensolution.lk" />
+        <link rel="alternate" hrefLang="si" href="https://greensolution.lk" />
+        <link rel="alternate" hrefLang="x-default" href="https://greensolution.lk" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"

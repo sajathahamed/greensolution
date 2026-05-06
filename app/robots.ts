@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://greensolutionpest.lk/sitemap.xml",
-    host: "https://greensolutionpest.lk",
+    sitemap: "https://greensolution.lk/sitemap.xml",
+    host: "https://greensolution.lk",
   };
 }
