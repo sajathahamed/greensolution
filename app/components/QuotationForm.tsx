@@ -28,7 +28,6 @@ export default function QuotationForm() {
       `Address: ${form.address}`,
       `Contact: ${form.contact}`,
       "",
-      "Please send your plan.",
     ].join("\n");
 
     window.open(
